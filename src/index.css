@@ -77,7 +77,7 @@ h6 {
 }
 @media (max-width: 330px) {
   body {
-    background-color: red;
+    /* background-color: red; */
     min-width: 330px;
   }
 }
