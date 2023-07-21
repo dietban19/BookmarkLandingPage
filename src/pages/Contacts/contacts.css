@@ -72,3 +72,25 @@
   width: 100%;
   gap: 1.6rem;
 }
+
+@media (max-width: 767px) {
+  .contact-left {
+    /* background-color: green; */
+  }
+  .contactModes {
+    /* background-color: blue; */
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    /* background-color: red; */
+  }
+  .mode {
+    width: 100%;
+  }
+  .contactButton {
+    /* background-color: green; */
+    padding: 1.5rem;
+    font-size: 18px;
+  }
+}
