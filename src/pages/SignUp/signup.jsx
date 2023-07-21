@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./signup.css";
 
 const signup = () => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState("");
   const handleError = (n, message = "error", type = "add") => {
     const target = document.getElementById(`${n}`);
     target.parentElement.nextElementSibling.innerHTML = message;

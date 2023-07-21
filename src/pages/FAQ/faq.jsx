@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./faq.css";
 
 import {
@@ -28,6 +28,14 @@ const faq = () => {
         >
           {data.map((item, i) => {
             const [className, setClassName] = useState(null);
+            useEffect(() => {
+              const updateClassName = () => {
+                setClassName((expanded) =>
+                  expanded ? "expanded" : "collapsed"
+                );
+              };
+              updateClassName();
+            }, []);
             return (
               <AccordionItem
                 className={`accordionItem ${className}`}
@@ -37,11 +45,21 @@ const faq = () => {
                 <AccordionItemHeading>
                   <AccordionItemButton className="accordionButton">
                     <AccordionItemState>
-                      {({ expanded }) =>
-                        expanded
-                          ? setClassName("expanded")
-                          : setClassName("collapsed ")
-                      }
+                      {({ expanded }) => (
+                        <>
+                          {expanded && (
+                            <span className="flexCenter accordionHeading">
+                              {item.heading}
+                            </span>
+                          )}
+                          <div className="flexCenter icon">
+                            <img
+                              src="./images/icon-arrow.svg"
+                              alt="Arrow Icon"
+                            />
+                          </div>
+                        </>
+                      )}
                     </AccordionItemState>
 
                     <span className="flexCenter accordionHeading">

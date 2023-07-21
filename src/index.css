@@ -2,7 +2,7 @@
 :root {
   --clr-pBlue: hsl(231, 69%, 60%);
   --clr-pRed: hsl(0, 94%, 66%);
-
+  --clr-neutral-300: hsl(228, 55%, 90%);
   --clr-neutral-400: hsl(229, 8%, 60%);
   --clr-neutral-500: hsl(229, 31%, 21%);
   --ff-primary: "Rubik", sans-serif;
@@ -74,6 +74,9 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+#root {
+  height: 100%;
 }
 @media (max-width: 330px) {
   body {
@@ -156,7 +159,7 @@ a {
   font-size: 1.1rem;
 }
 .orangeText {
-  color: orange;
+  color: var(--clr-pRed);
   font-size: 1.5rem;
   font-weight: 600;
 }

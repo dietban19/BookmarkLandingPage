@@ -21,7 +21,7 @@ const Features = () => {
   //   }
   // }, [activeTab, swiper]);
   return (
-    <section className="f-wrapper">
+    <section className="f-wrapper" id="features">
       <div className="paddings innerWidth flexCenter f-container">
         <span className="flexColCenter f-header">
           <span className="f-header__title"> Features</span>

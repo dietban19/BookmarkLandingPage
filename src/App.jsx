@@ -1,25 +1,30 @@
 import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
+import Home from "./components/Home/home";
+import Contacts from "./pages/Contacts/contacts";
 import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import Hero from "./pages/Hero/hero";
-import Features from "./pages/Features/features";
-import Download from "./pages/Download/download";
-import FAQ from "./pages/FAQ/faq";
-import SignUp from "./pages/SignUp/signup";
-
+import Layout from "./components/common/layout";
 const App = () => {
+  // const location = useLocation();
+  // const currentUrl = location.pathname;
+  // console.log(currentUrl);
+
   return (
-    <div className="App">
-      <div>
-        <Navbar />
-        <Hero />
-      </div>
-      <Features />
-      <Download />
-      <FAQ />
-      <SignUp />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      {/* <Layout> */}
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="*" element={<Navigate to="/home" />} />
+      </Routes>
+      {/* </Layout> */}
+    </BrowserRouter>
   );
 };
 

@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 // import Logo from "../assets/logo-bookmark.svg";
 // import "./header.css";
+import { useLocation, useNavigate } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
 import { MdClose } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
 const navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const currentUrl = location.pathname;
+
   // Set the initial state of the open based on screen width
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -62,25 +67,47 @@ const navbar = () => {
     color: "white", // Change this to the desired color
     // Other styles if needed
   };
-  console.log(open, window.innerWidth);
+
+  function handleClick(e) {
+    if (currentUrl !== "/home") {
+      navigate(`/home${e}`);
+    } else {
+      console.log("good");
+    }
+  }
+  function tes(e) {
+    navigate(e);
+  }
   return (
     <section className="nav-wrapper">
       <div className="paddings innerWidth nav-container">
         <div className="flexCenter navImage">
-          <a href="#asdf">
-            {open && window.innerWidth <= 768 ? (
+          {open && window.innerWidth <= 768 ? (
+            <a href="/home">
               <img src="./images/logo-bookmark-mobile.svg" />
-            ) : scrolled ? (
-              <img src="./images/logo-bookmark-mobile.svg " />
-            ) : (
+            </a>
+          ) : scrolled ? (
+            <a href="/home">
+              <img src="./images/logo-bookmark-mobile.svg" />
+            </a>
+          ) : (
+            <a href="/home">
               <img src="./images/logo-bookmark.svg" />
-            )}
-          </a>
+            </a>
+          )}
         </div>
         <div className={`flexCenter ${open ? "nav-menu" : "nav-menu  closed"}`}>
-          <a href="#">Features</a>
+          <a
+            href="#features"
+            onClick={() => {
+              handleClick("#features");
+            }}
+          >
+            Features
+          </a>
           <a href="#">Pricing</a>
-          <a href="#">Contact</a>
+          <Link to="/contacts">Contact</Link>
+
           <button className="navButton loginButton">
             <a href="#">Login</a>
           </button>
