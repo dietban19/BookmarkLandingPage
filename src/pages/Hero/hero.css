@@ -1,7 +1,6 @@
 .h-container {
   justify-content: space-evenly;
   flex-direction: row-reverse;
-  /* margin-bottom: ; */
 }
 
 .h-container > div {
@@ -31,6 +30,9 @@
   /* background-color: red; */
   gap: 1rem;
 }
+.buttons .button {
+  width: 100%;
+}
 
 .buttons > :nth-child(2) {
   background-color: hsl(0, 0%, 97%);
@@ -54,10 +56,6 @@
 }
 
 @media (max-width: 870px) {
-  .h-imageContainer::before {
-  }
-  .h-left {
-  }
   .buttons button {
     width: 50%;
   }

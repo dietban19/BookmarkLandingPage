@@ -3,7 +3,14 @@
   justify-content: space-between;
   width: 100%;
   background-color: var(--clr-neutral-500);
-  height: 8rem;
+
+  /* height: 8rem; */
+}
+.foot-wrapper {
+  /* background-color: red; */
+  height: 100%;
+  padding: 3rem 0rem;
+  background-color: var(--clr-neutral-500);
 }
 .footer-container .footerLeft {
   flex-direction: row;
@@ -22,4 +29,15 @@
 }
 .footerRight {
   gap: 1.25rem;
+}
+@media (max-width: 768px) {
+  .foot-wrapper {
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .footer-container .footerLeft {
+    flex-direction: column;
+  }
 }

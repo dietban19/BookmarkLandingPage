@@ -9,7 +9,7 @@ import "./navbar.css";
 const navbar = () => {
   // Set the initial state of the open based on screen width
   const [open, setOpen] = useState(false);
-
+  const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
     // Add or remove the "disable-scroll" class on the body element based on the "open" state
     if (open) {
@@ -21,13 +21,22 @@ const navbar = () => {
       document.body.classList.remove("disable-scroll");
     }
   }, [open]);
+
   useEffect(() => {
     const handleScroll = () => {
-      const headerWrapper = document.querySelector(".h-wrapper");
+      const headerWrapper = document.querySelector(".nav-wrapper");
+      const headerNav = document.querySelector(".nav-menu");
+      const headerButton = document.querySelector(".loginButton");
       if (window.scrollY > 0) {
         headerWrapper.classList.add("scrolled");
+        headerNav.classList.add("navScrolled");
+        headerButton.classList.add("buttonScrolled");
+        setScrolled(true);
       } else {
         headerWrapper.classList.remove("scrolled");
+        headerNav.classList.remove("navScrolled");
+        headerButton.classList.remove("buttonScrolled");
+        setScrolled(false);
       }
     };
     const handleResize = () => {
@@ -61,6 +70,8 @@ const navbar = () => {
           <a href="#asdf">
             {open && window.innerWidth <= 768 ? (
               <img src="./images/logo-bookmark-mobile.svg" />
+            ) : scrolled ? (
+              <img src="./images/logo-bookmark-mobile.svg " />
             ) : (
               <img src="./images/logo-bookmark.svg" />
             )}

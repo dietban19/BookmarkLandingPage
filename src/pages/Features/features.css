@@ -1,7 +1,9 @@
 .f-container {
   /* flex-direction: column; */
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
+
+  margin-bottom: 6rem;
 }
 .f-header {
   margin-bottom: 0rem;
@@ -23,7 +25,7 @@
 }
 
 .active {
-  border-bottom: 4px solid var(--clr-pRed);
+  border-bottom: 4px solid var(--clr-pRed) !important;
 }
 .tabContents {
   /* background-color: red; */
@@ -34,11 +36,11 @@
   height: 32rem;
 }
 .f-card {
+  transition: all 150ms ease-in-out;
   padding: 1rem;
   border-radius: 0.75rem;
   max-width: max-content;
   margin: auto;
-  transition: all 150ms ease-in-out;
   gap: 5rem;
 }
 .f-card__details {
@@ -46,14 +48,13 @@
 }
 .f-card > img {
   flex: 2;
-  max-width: 30rem;
+  max-width: 75%;
 }
 .f-card > :nth-child(2) {
   flex: 1;
   max-width: 588px;
 }
-.f-card__details {
-}
+
 .r-container .swiper-horizontal {
   overflow: visible;
 }
@@ -64,10 +65,38 @@
 }
 
 .tabContainer {
-  /* position: absolute; */
   flex-direction: row;
   /* top: -3rem;
   border-bottom: 1px solid black;
 
   width: 100%; */
+}
+
+@media (max-width: 767px) {
+  .f-wrapper {
+    /* background-color: red; */
+  }
+  .f-container {
+    /* background-color: red; */
+
+    margin-bottom: 8rem;
+  }
+  .tabTitle {
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid rgba(186, 186, 186, 0.844);
+  }
+  .f-container .f-card {
+    max-width: 90%;
+    /* height: 0%; */
+    margin-bottom: 50rem;
+  }
+  .f-card > img {
+    max-width: 100%;
+  }
+  .f-container .f-card__details {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+  }
 }

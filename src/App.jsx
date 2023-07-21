@@ -10,8 +10,10 @@ import SignUp from "./pages/SignUp/signup";
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
+      <div>
+        <Navbar />
+        <Hero />
+      </div>
       <Features />
       <Download />
       <FAQ />

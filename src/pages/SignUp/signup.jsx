@@ -17,14 +17,16 @@ const signup = () => {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(mail);
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  function handleCheck() {
     if (!validateEmail(email)) {
       handleError("email", "Whoops, make sure its an email");
     } else {
       handleError("email", "", "remove");
     }
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleCheck();
     console.log(email);
   };
   return (
