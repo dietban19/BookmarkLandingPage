@@ -85,3 +85,9 @@
     width: 30%;
   }
 }
+
+@media (max-width: 330px) {
+  .h-wrapper {
+    min-width: 335px;
+  }
+}

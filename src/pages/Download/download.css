@@ -58,3 +58,9 @@
     margin-top: 1rem;
   }
 }
+
+@media (max-width: 330px) {
+  .d-wrapper {
+    min-width: 335px;
+  }
+}

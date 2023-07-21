@@ -33,3 +33,9 @@
   justify-content: space-between;
   cursor: pointer;
 }
+
+@media (max-width: 330px) {
+  .faq-wrapper {
+    min-width: 335px;
+  }
+}

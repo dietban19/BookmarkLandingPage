@@ -104,3 +104,9 @@
     height: 100%;
   }
 }
+
+@media (max-width: 330px) {
+  .su-wrapper {
+    min-width: 335px;
+  }
+}
