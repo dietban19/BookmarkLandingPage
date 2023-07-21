@@ -13,6 +13,9 @@ const navbar = () => {
   useEffect(() => {
     // Add or remove the "disable-scroll" class on the body element based on the "open" state
     if (open) {
+      if (window.innerWidth > 768) {
+        return;
+      }
       document.body.classList.add("disable-scroll");
     } else {
       document.body.classList.remove("disable-scroll");
@@ -50,12 +53,13 @@ const navbar = () => {
     color: "white", // Change this to the desired color
     // Other styles if needed
   };
+  console.log(open, window.innerWidth);
   return (
     <section className="nav-wrapper">
       <div className="paddings innerWidth nav-container">
         <div className="flexCenter navImage">
           <a href="#asdf">
-            {open ? (
+            {open && window.innerWidth <= 768 ? (
               <img src="./images/logo-bookmark-mobile.svg" />
             ) : (
               <img src="./images/logo-bookmark.svg" />
