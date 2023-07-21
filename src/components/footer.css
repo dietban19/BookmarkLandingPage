@@ -1,0 +1,25 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--clr-neutral-500);
+  height: 8rem;
+}
+.footer-container .footerLeft {
+  flex-direction: row;
+  gap: 2rem;
+}
+.footerNav {
+  gap: 1.25rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+.footerImage > img {
+  color: white;
+  fill: white;
+}
+.footerRight {
+  gap: 1.25rem;
+}

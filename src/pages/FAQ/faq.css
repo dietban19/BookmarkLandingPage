@@ -1,0 +1,35 @@
+.faq-container {
+  gap: 1rem;
+}
+.faq-desc {
+  max-width: 588px;
+  text-align: center;
+}
+.faq-container .accordion {
+  border: none;
+  outline: none;
+}
+.accordion {
+  max-width: 588px;
+  border: none;
+  outline: none;
+}
+
+.accordion .accordionItem {
+  background-color: white;
+  border-top: 0.8px solid rgba(128, 128, 128, 0.143);
+  border-bottom: 0.8px solid rgba(128, 128, 128, 0.143);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+}
+
+.accordionButton {
+  display: flex;
+  background-color: white;
+  /* background-color: red; */
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+}

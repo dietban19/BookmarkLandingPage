@@ -1,0 +1,60 @@
+.d-container {
+}
+.d-header {
+  flex-direction: column;
+  text-align: center;
+  max-width: 588px;
+}
+.d-header__title {
+  font-size: 1.75rem;
+}
+
+.browsers {
+  width: 100%;
+}
+
+.browserCard {
+  width: 282px;
+  height: 364px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px hsla(231, 69%, 60%, 0.15);
+}
+.browserCard > :nth-child(3) {
+  margin-bottom: 3rem;
+}
+.browserCard > :nth-child(4) {
+  margin-bottom: 1rem;
+}
+.browsers > :nth-child(1) {
+  margin-top: -4rem;
+}
+.browsers > :nth-child(2) {
+  margin-top: 6rem;
+}
+.browsers > :nth-child(3) {
+  margin-top: 12rem;
+}
+.browserName {
+  color: var(--clr-neutral-500);
+  font-weight: 500;
+}
+
+@media (min-width: 975px) {
+  .browsers {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+    padding-bottom: 10rem;
+  }
+}
+
+@media (max-width: 975px) {
+  .browsers {
+    margin-top: 6rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .browsers > .browserCard {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,100 @@
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  outline: 1px solid black;
+  /* position: sticky; */
+}
+.navImage {
+}
+.nav-menu {
+  gap: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.125rem;
+  font-size: 18px;
+}
+.navButton {
+  border: none;
+  color: white;
+  background: var(--clr-pBlue);
+  width: 8rem;
+
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  transition: all 100ms ease-in;
+}
+.loginButton {
+  letter-spacing: 0.125rem;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: var(--clr-pRed);
+}
+.menu-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .navImage {
+    z-index: 1000;
+    /* width: rem; */
+    /* background-image: url("../images/logo-bookmark-mobile.svg"); */
+  }
+  .menu-icon {
+    display: block;
+    z-index: 999;
+  }
+  .menu-icon button {
+    background-color: transparent;
+    border: none;
+    /* color: white; */
+  }
+  .nav-container .nav-menu {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    gap: 0.75rem;
+    padding-top: 7rem;
+    color: white;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background-color: hsla(229, 31%, 21%, 0.933);
+    top: 0;
+    right: 0;
+  }
+  .nav-container .nav-menu > a {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    border-top: 0.1px solid rgba(255, 255, 255, 0.571);
+    /* outline: 1px solid black; */
+
+    font-size: 1.5rem;
+  }
+  .closed {
+    display: none !important;
+  }
+  .loginButton {
+    width: 90%;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+
+@media (max-width: 330px) {
+  .nav-wrapper {
+    background-color: blue;
+    min-width: 335px;
+  }
+  .nav-container {
+    /* position: relative; */
+    background-color: pink;
+  }
+  .nav-container .nav-menu {
+    width: 100%;
+  }
+}

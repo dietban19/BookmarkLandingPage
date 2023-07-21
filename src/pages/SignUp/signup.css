@@ -1,0 +1,91 @@
+.su-container {
+  background-color: var(--clr-pBlue);
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.su-text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+}
+.suTitle {
+  font-weight: 500;
+  font-size: 18px;
+  color: white;
+}
+.emailContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* background-color: blue; */
+  /* width: 25%; */
+  gap: 1rem;
+  height: 100px;
+}
+.inputWrapper {
+  padding: 1px;
+  background-color: var(--clr-pBlue);
+
+  height: 3.6rem;
+  border-radius: 0.25rem;
+}
+.errText {
+  justify-content: flex-start;
+}
+.errIcon {
+  position: absolute;
+  right: 0.25rem;
+}
+.inputWrapper > span {
+  font-size: 12px;
+  color: white;
+  font-style: italic;
+  font-weight: 500;
+  padding: 0.15rem 0rem;
+}
+.inputWrapperErr {
+  background-color: var(--clr-pRed);
+}
+.buttonContainer {
+  padding: 1px;
+  background-color: var(--clr-pRed);
+  /* width: 100%; */
+  border-radius: 0.25rem;
+}
+.buttonContainer button {
+  background-color: var(--clr-pRed);
+  font-weight: 500;
+  border-radius: 0.25rem;
+  padding: 0.24rem 2rem;
+  color: white;
+  font-size: 14px;
+  border: none;
+}
+.buttonContainer button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--clr-pRed);
+}
+.inputContainer {
+  position: relative;
+  border-radius: 0.25rem;
+  font-size: 14px;
+  background-color: white;
+  gap: 1rem;
+  padding: 0.25rem;
+  z-index: 2;
+}
+
+.inputContainer > input[type="text"] {
+  background-color: transparent;
+  margin-right: 2.5rem;
+  /* background-color: red; */
+  border: none;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}

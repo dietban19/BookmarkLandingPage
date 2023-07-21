@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+:root {
+  --clr-pBlue: hsl(231, 69%, 60%);
+  --clr-pRed: hsl(0, 94%, 66%);
+
+  --clr-neutral-400: hsl(229, 8%, 60%);
+  --clr-neutral-500: hsl(229, 31%, 21%);
+  --ff-primary: "Rubik", sans-serif;
+
+  --shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+@media (max-width: 330px) {
+  body {
+    background-color: red;
+    min-width: 330px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--ff-primary);
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.paddings {
+  padding: 1.5rem;
+}
+.containerPadding {
+  padding: 2rem 2rem;
+}
+.white-gradient {
+  /* background-color: red; */
+}
+
+.innerWidth {
+  width: 100%;
+}
+
+.flexCenter {
+  display: flex;
+  row-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flexColCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flexColStart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flexColEnd {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.primaryText {
+  color: var(--clr-neutral-500);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.secondaryText {
+  color: var(--clr-neutral-400);
+  font-size: 1.1rem;
+}
+.orangeText {
+  color: orange;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* media queries */
+@media (min-width: 1536px) {
+  .innerWidth {
+    /* max-width: 1280px; */
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .paddings {
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 1280px), (min-width: 768px) {
+  .paddings {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .primaryText {
+    /* font-size: 1.5rem; */
+  }
+  .orangeText {
+    font-size: 1.2rem;
+  }
+}
+
+.button {
+  border: none;
+  color: white;
+  background: var(--clr-pBlue);
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 100ms ease-in;
+  box-shadow: var(--shadow);
+}
+/* 
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+} */
+
+.disable-scroll {
+  overflow: hidden !important;
+}

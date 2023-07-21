@@ -1,0 +1,91 @@
+.h-container {
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  /* margin-bottom: ; */
+}
+
+.h-container > div {
+  flex: 1;
+}
+.h-imageContainer img {
+  max-width: 100%;
+}
+/* .h-container .h-imageContainer {
+  width: 47%;
+  padding: 0 92px 102px 0;
+  position: relative;
+} */
+
+.h-wrapper {
+  /* background-color: red; */
+  overflow: hidden;
+  padding: 0 1em;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.h-left {
+  gap: 1rem;
+}
+
+.buttons {
+  /* background-color: red; */
+  gap: 1rem;
+}
+
+.buttons > :nth-child(2) {
+  background-color: hsl(0, 0%, 97%);
+  color: black;
+}
+.h-right {
+  position: relative;
+}
+.h-imageContainer::before {
+  content: "";
+  background-color: var(--clr-pBlue);
+  width: 100%;
+
+  height: 320px;
+  height: 80%;
+  border-radius: 7rem 0rem 0rem 7rem;
+  display: block;
+  position: absolute;
+  top: 4rem;
+  right: -30%;
+  z-index: -1;
+}
+
+@media (max-width: 870px) {
+  .h-imageContainer::before {
+  }
+  .h-left {
+  }
+  .buttons button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .h-container {
+    flex-direction: column;
+  }
+  .h-imageContainer::before {
+    height: 90%;
+  }
+  .h-container .h-left {
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .h-left .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  .buttons button {
+    width: 30%;
+  }
+}

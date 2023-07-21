@@ -1,0 +1,73 @@
+.f-container {
+  /* flex-direction: column; */
+  position: relative;
+  overflow: hidden;
+}
+.f-header {
+  margin-bottom: 0rem;
+  overflow: visible;
+}
+.f-header__title {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.f-header__desc {
+  text-align: center;
+  max-width: 588px;
+}
+
+.tabTitle {
+  /* border-bottom: 4px solid var(--clr-pRed); */
+  padding: 2rem;
+  font-size: 18px;
+}
+
+.active {
+  border-bottom: 4px solid var(--clr-pRed);
+}
+.tabContents {
+  /* background-color: red; */
+  flex-direction: row;
+}
+.f-cardContainer {
+  width: 100%;
+  height: 32rem;
+}
+.f-card {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  max-width: max-content;
+  margin: auto;
+  transition: all 150ms ease-in-out;
+  gap: 5rem;
+}
+.f-card__details {
+  gap: 1rem;
+}
+.f-card > img {
+  flex: 2;
+  max-width: 30rem;
+}
+.f-card > :nth-child(2) {
+  flex: 1;
+  max-width: 588px;
+}
+.f-card__details {
+}
+.r-container .swiper-horizontal {
+  overflow: visible;
+}
+.f-container .swiperWrapper {
+  padding-top: 6rem;
+  overflow: visible;
+  flex-direction: row-reverse;
+}
+
+.tabContainer {
+  /* position: absolute; */
+  flex-direction: row;
+  /* top: -3rem;
+  border-bottom: 1px solid black;
+
+  width: 100%; */
+}
